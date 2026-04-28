@@ -32,7 +32,7 @@ function Icon({ name, className = "h-5 w-5" }: { name: string; className?: strin
     strokeWidth: 2,
     strokeLinecap: "round" as const,
     strokeLinejoin: "round" as const,
-    "aria-hidden": "true",
+    "aria-hidden": true,
   };
   const icons: Record<string, React.ReactNode> = {
     target: <svg {...common}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1" /></svg>,
