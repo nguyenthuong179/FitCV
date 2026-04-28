@@ -19,8 +19,8 @@ export function Button({
   );
 }
 
-export function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <div className={`rounded-3xl border border-slate-200 bg-white shadow-sm ${className}`}>{children}</div>;
+export function Card({ children, className = "", ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={`rounded-3xl border border-slate-200 bg-white shadow-sm ${className}`} {...props}>{children}</div>;
 }
 
 export function Badge({ children, tone = "neutral" }: { children: React.ReactNode; tone?: "neutral" | "green" | "red" | "purple" }) {

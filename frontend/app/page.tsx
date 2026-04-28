@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Badge, Button, Card } from "@/components/ui";
 
+type IconName = "target" | "sparkles" | "upload" | "file" | "check" | "x" | "arrow";
+
 type Recommendation = {
   skill: string;
   priority: string;
@@ -23,7 +25,7 @@ type AnalyzeResponse = {
 const sampleCv = `Frontend Fresher with experience building React apps. Skilled in JavaScript, HTML, CSS, Git, REST API. Built student project: job board app with authentication and responsive UI.`;
 const sampleJd = `We are hiring Frontend Fresher. Requirements: React, JavaScript, TypeScript, Git, REST API, Docker basic, testing basic. Nice to have AWS and CI/CD.`;
 
-function Icon({ name, className = "h-5 w-5" }: { name: string; className?: string }) {
+function Icon({ name, className = "h-5 w-5" }: { name: IconName; className?: string }) {
   const common = {
     className,
     viewBox: "0 0 24 24",
@@ -43,7 +45,7 @@ function Icon({ name, className = "h-5 w-5" }: { name: string; className?: strin
     x: <svg {...common}><circle cx="12" cy="12" r="9" /><path d="M15 9l-6 6" /><path d="M9 9l6 6" /></svg>,
     arrow: <svg {...common}><path d="M5 12h14" /><path d="M13 5l7 7-7 7" /></svg>,
   };
-  return icons[name] || icons.sparkles;
+  return icons[name];
 }
 
 function ScoreRing({ score }: { score: number }) {
