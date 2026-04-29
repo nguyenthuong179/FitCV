@@ -8,7 +8,7 @@ export function Button({
 }: React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "secondary" | "ghost" }) {
   const base = "inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-60";
   const variants = {
-    primary: "bg-slate-950 text-white hover:bg-slate-800",
+    primary: "bg-gradient-to-r from-indigo-600 to-indigo-700 text-white hover:from-indigo-700 hover:to-indigo-800 shadow-sm",
     secondary: "border border-slate-200 bg-white text-slate-950 hover:bg-slate-50",
     ghost: "bg-transparent text-slate-600 hover:bg-slate-100",
   };

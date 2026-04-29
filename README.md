@@ -64,6 +64,7 @@ cd frontend
 npm install
 cp .env.example .env.local
 npm run dev
+npm run build
 ```
 
 Frontend runs at:
