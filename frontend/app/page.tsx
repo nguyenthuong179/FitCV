@@ -481,7 +481,10 @@ export default function Home(): ReactElement {
             </div>
             <span className="font-extrabold text-slate-950">FitCV AI</span>
           </div>
-          <span>© 2026 FitCV AI · Built for Vietnam freshers</span>
+          <span>
+            <div>© FitCV AI · Built for Vietnam Job Seekers</div>
+            <div>Developed By THUONG NGUYEN</div>
+          </span>
         </div>
       </footer>
     </div>
